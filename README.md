@@ -62,4 +62,4 @@ Demo of the App:
 
 ![Landing page](https://github.com/mdevasish/Feige_Loan_Application_Approvals/blob/master/Screenshots/Demo.gif)
 
-
+View the app at https://loanapplicationapproval.herokuapp.com/
