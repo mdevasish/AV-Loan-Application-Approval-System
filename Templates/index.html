@@ -1,0 +1,279 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Application System</title>
+
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header" style="text-align : center">
+                <a class="navbar-brand" href="/" >Loan Approval Application System</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+        <form action="\predict" method="post">
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Name of the Applicant</h5>
+                            <!-- Name of the applicant -->
+                            <input type="text" name="name" id="name_field" required="required" size="50">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Age</h5>
+                            <!-- Age -->
+                            <input type="text" name="age" id="age_field" required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Gender -->
+                            <h5 class="card-title">Gender</h5>
+                            <select name="gender" id="gender_field" required="required">
+                                <option value="1">Male</option>
+                                <option value="0">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Marital Status</h5>
+                            <!-- Married -->
+                            <select name="married" id="married_field" required="required">
+                                <option value="1">Married</option>
+                                <option value="0">Not Married</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dependents</h5>
+                            <!-- Total Stops -->
+                            <select name="dependents" id="dependents_field" required="required">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3+</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Education Status</h5>
+                            <!-- Airline -->
+                            <select name="education" id="education_field" required="required">
+                                <option value="0">Not Graduated</option>
+                                <option value="1">Graduated</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Credit History</h5>
+                            <!-- Card History -->
+                            <label class="radio-inline">
+                                <input type="radio" name="chistory" value="0" style="margin:10px">Not Available
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="chistory" value="1" style="margin:10px">Available
+                              </label>
+                            <!--select name="chistory" id="chistory_field" required="required"-->
+                                <!--option value="0">Not Available</option-->
+                                <!--option value="1">Available</option-->
+                            <!--/select-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Self Employment</h5>
+                            <!-- Employment -->
+                            <!--select name="employment" id="employment_field" required="required"-->
+                                <!--option value="0">No</option-->
+                                <!--option value="1">Yes</option-->
+                            <!--/select-->
+                            <label class="radio-inline">
+                                <input type="radio" name="employement" value="0" style="margin:10px">Not Employed
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="employement" value="1" style="margin:10px">Employed
+                              </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Applicant Income (in SGD)</h5>
+                            <!-- Card History -->
+                            <input type="text" name="aincome" id="aincome_field" required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Coapplicant Income (in SGD)</h5>
+                            <!-- Coapplicant Income -->
+                            <input type="text" name="caincome" id="caincome_field" required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Loan Amount (in SGD)</h5>
+                            <!-- Loan Amount -->
+                            <input type="text" name="loan" id="loan_field" required="required" size="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Duration of the Loan</h5>
+                                <!-- Name of the applicant -->
+                            <input type="text" name="duration" id="duration_field" required="required" size="10">
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Property Region</h5>
+                                <!-- Property Region -->
+                            <label class="radio-inline">
+                                <input type="radio" name="region" value="2" style="margin:10px">Urban
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="region" value="0" style="margin:10px">Rural
+                            </label>
+                                <label class="radio-inline">
+                                <input type="radio" name="region" value="1" style="margin:10px">Semi Urban
+                            </label>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Select the model to make the prediction</h5>
+                                <!-- Name of the applicant -->
+                                <label class="radio-inline">
+                                    <input type="radio" name="model" value="1" style="margin:10px">Logistic Regression
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="model" value="0" style="margin:10px">Decision Tree Classifier
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="model" value="2" style="margin:10px">Ensemble of Logistic Regression and Decision Tree
+                                </label>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div style="text-align:center">
+                <!-- Submit -->
+                <input type="submit" value="Submit" class="btn btn-secondary" style="position:absolute">
+                
+                <br>
+                <br>
+                <h3>{{ prediction_text }}</h3>
+            </div>
+        </form>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

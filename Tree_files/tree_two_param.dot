@@ -1,0 +1,8 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="Credit_History <= 0.5\ngini = 0.436\nsamples = 429\nvalue = [138, 291]", fillcolor="#97cbf1"] ;
+1 [label="gini = 0.293\nsamples = 73\nvalue = [60, 13]", fillcolor="#eb9c64"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.342\nsamples = 356\nvalue = [78, 278]", fillcolor="#71b8ec"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
